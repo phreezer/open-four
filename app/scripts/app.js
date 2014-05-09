@@ -2,8 +2,6 @@
 
 angular
   .module('forumApp', [
-    'ngCookies',
-    'ngResource',
     'ngSanitize',
     'ngRoute'
   ])
