@@ -1,0 +1,8 @@
+{
+	"status": "ok",
+	"account": {
+        "uid" : 1,
+        "displayName" : "Phreezer",
+        "avatar" : "uploads/avatars/1.png"
+    }
+}

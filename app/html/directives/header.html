@@ -1,0 +1,22 @@
+<div class="row">
+    <a class="site-logo" href="" alt="eco league">
+        <img src="img/" />
+    </a>
+    
+    <ul class="visible-md visible-lg">
+        <a ng-repeat="menuItem in headerMenu" href="{{ menuItem.url }}" target="{{ menuItem.target }}">
+            <li>{{ menuItem.title }}</li>
+        </a>
+    </ul>
+    
+    <div class="account-container" ng-show="showAccountContainer">
+        <div ng-if="loginStatus">
+            Welcome <span>{{ account.displayName }}</span>
+        </div>
+        
+        <div ng-if="!loginStatus">
+            Login
+        </div>
+    </div>
+
+</div>

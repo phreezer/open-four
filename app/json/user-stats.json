@@ -1,0 +1,11 @@
+{
+	"status": "ok",
+	"account": {
+        "uid" : 1,
+        "posts" : 10,
+        "replys" : 40,
+        "rep" : 1000,
+        "favs" : 4,
+        "createdDate" : "2014-01-01 04:30:00"
+    }
+}

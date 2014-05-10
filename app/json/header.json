@@ -1,0 +1,23 @@
+{
+	"status": "ok",
+	"count": 3,
+	"menu": [{
+        "uid": 1,
+        "title": "Forum",
+        "parent": 0,
+        "url": "/forum",
+        "target": ""
+    }, {
+        "uid": 2,
+        "title": "Downloads",
+        "parent": 0,
+        "url": "/downloads",
+        "target": ""
+    },{
+        "uid": 3,
+        "title": "About",
+        "parent": 0,
+        "url": "/about",
+        "target": ""
+    }]
+}

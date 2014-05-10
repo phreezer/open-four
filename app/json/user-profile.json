@@ -1,0 +1,24 @@
+{
+    "status": "ok",
+    "account": {
+        "uid": 1,
+        "displayName": "Phreezer",
+        "firstName": "Marcus",
+        "middleName": "Heath",
+        "lastName": "Showalter",
+        "age": 30,
+        "gender": "Male",
+        "languages": ["English", "Spanish"],
+        "locations": [{
+            "type": "current",
+            "city": "Pasco",
+            "state": "WA",
+            "country": "USA"
+        }],
+        "websites": ["myspace.com/phreezer", "heathshowalter.com"],
+        "social": [{
+            "facebook" : "facebook.com/phreezer"
+        }],
+        "email": "marcus.showalter@gmail.com"
+    }
+}
