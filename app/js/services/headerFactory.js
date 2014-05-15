@@ -12,10 +12,10 @@
 /*jshint indent:4 */
 
 angular.module('forumApp')
-    .factory('headerFactory', function($http){
+    .factory('headerFactory', function($http, APP_CONFIG){
         return {
             get : function(params){
-                return $http.get('json/header.json', {
+                return $http.get(APP_CONFIG.JSON_HEADER_URL, {
                     params : params
                 });
             }

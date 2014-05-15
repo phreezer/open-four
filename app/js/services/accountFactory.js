@@ -12,11 +12,11 @@
 /*jshint indent:4 */
 
 angular.module('forumApp')
-    .factory('accountFactory', function($http){
+    .factory('accountFactory', function($http, APP_CONFIG){
         return {
             // Check if user is logged in also retrieve avatar and display name
             getStatus : function(params) {
-                return $http.get('json/account-status.json', {
+                return $http.get(APP_CONFIG.JSON_ACCOUNT_URL, {
                     params : params
                 });
             }

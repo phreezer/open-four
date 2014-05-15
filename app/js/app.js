@@ -10,18 +10,18 @@
 
 'use strict';
 
-angular
-  .module('forumApp', [
-    'ngSanitize',
-    'ngRoute'
-  ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
+angular.module('forumApp', [
+'ngSanitize', 
+'ngRoute', 
+'heath-responsive'])
+
+.config(function($routeProvider, responsiveHelpProvider, APP_CONFIG) {
+    
+    $routeProvider.when('/', {
         templateUrl: 'html/pages/main.html',
         controller: 'MainCtrl'
-      })
-      .otherwise({
+    }).otherwise({
         redirectTo: '/'
-      });
-  });
+    });
+    
+})

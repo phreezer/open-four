@@ -2,8 +2,11 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-  <head>
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>ECO League</title>
@@ -19,16 +22,17 @@
     <!-- build:css({.tmp,app}) css/main.css -->
     <link rel="stylesheet" href="css/main.css">
     <!-- endbuild -->
-  </head>
-  <body ng-app="forumApp">
+</head>
+
+<body ng-app="forumApp" class="window-resize-listener">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
+    
     <div class="header"></div>
-      
+
     <div class="menu"></div>
-      
+
     <div class="container" ng-view=""></div>
 
     <div class="chat"></div>
@@ -48,19 +52,30 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-      
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="js/app.js"></script>
-        <script src="js/controllers/main.js"></script>
-        <script src="js/controllers/oflogin.js"></script>
-        <script src="js/controllers/ofpost.js"></script>
-        <script src="js/controllers/ofpostlist.js"></script>
-        <script src="js/controllers/offeaturedlist.js"></script>
-        <script src="js/directives/header.js"></script>
-        <script src="js/services/headerFactory.js"></script>
-        <script src="js/services/userFactory.js"></script>
-        <script src="js/services/accountFactory.js"></script>
-      
-        <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="js/app.js"></script>
+    <script src="js/config.js"></script>
+    
+    <!-- controllers -->
+    <script src="js/controllers/main.js"></script>
+    <script src="js/controllers/oflogin.js"></script>
+    <script src="js/controllers/ofpost.js"></script>
+    <script src="js/controllers/ofpostlist.js"></script>
+    <script src="js/controllers/offeaturedlist.js"></script>
+    
+    <!-- directives -->
+    <script src="js/directives/header.js"></script>
+    <script src="js/directives/menu.js"></script>
+    
+    <!-- services -->
+    <script src="js/services/responsiveProvider.js"></script>
+    <script src="js/services/accountFactory.js"></script>
+    <script src="js/services/headerFactory.js"></script>
+    <script src="js/services/menuFactory.js"></script>
+    <script src="js/services/userFactory.js"></script>
+    <!-- endbuild -->
+
 </body>
+
 </html>

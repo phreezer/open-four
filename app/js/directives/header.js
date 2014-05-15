@@ -8,6 +8,8 @@
 * Date: 2014-05-10 06:05 AM
 */
 
+(function ( angular ) {
+    
 'use strict';
 
 angular.module('forumApp')
@@ -27,7 +29,6 @@ angular.module('forumApp')
                 });
                 
                 accountFactory.getStatus().then(function(response){
-                    console.log(response.data);
                     if(response.data.status == "ok"){
                         
                         $rootScope.loginStatus = true;
@@ -73,3 +74,5 @@ angular.module('forumApp')
 			restrict: 'C'
 		};
 	});
+
+})( window.angular );
