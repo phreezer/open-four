@@ -1,0 +1,62 @@
+{
+	"status": "ok",
+    "__comments" : "Note that the target/abbr fields are optional provide checks for them in the template. The url contains a hash id that serves as the season or tournament id",
+	"count": 3,
+	"menu": [{
+        "uid": 1,
+        "title": "Counter Strike:Source",
+        "abbr": "CS:S",
+        "parent": 0,
+        "url": "#!/css/1h3216g5/news",
+        "target": "_blank"
+    },{
+        "uid": 20,
+        "title": "Announcements",
+        "abbr": "News",
+        "parent": 1,
+        "url": "#!/css/1h3216g5/news"
+    },{
+        "uid": 3,
+        "title": "Downloads",
+        "parent": 1,
+        "url": "#!/css/1h3216g5/downloads"
+    },{
+        "uid": 7,
+        "title": "Tournaments",
+        "parent": 0,
+        "url": "#!/css/1h3216g5/tournaments"
+    },{
+        "uid": 8,
+        "title": "Weekly Tournament",
+        "parent": 7,
+        "url": "#!/css/1h3216g5/news"
+    },{
+        "uid": 4,
+        "title": "DOTA 2",
+        "abbr": "DOTA2",
+        "parent": 0,
+        "url": "#!/dota2/1h3216g5/news"
+    },{
+        "uid": 5,
+        "title": "Announcements",
+        "abbr": "News",
+        "parent": 4,
+        "url": "#!/dota2/1h3216g5/announcements"
+    },{
+        "uid": 6,
+        "title": "Downloads",
+        "parent": 4,
+        "url": "#!/dota2/1h3216g5/downloads"
+    },{
+        "uid": 9,
+        "title": "2014",
+        "abbr": "News",
+        "parent": 5,
+        "url": "#!/dota2/1h3216g5/announcements"
+    },{
+        "uid": 10,
+        "title": "January",
+        "parent": 9,
+        "url": "#!/dota2/1h3216g5/downloads"
+    }]
+}
