@@ -33,7 +33,7 @@ angular.module('forumApp')
 
 .config( function(responsiveHelpProvider, APP_CONFIG) {
     var responsiveHelper = responsiveHelpProvider.$get();
-
+    /*
     // Default Settings
     APP_CONFIG.DEVICE = 'Desktop';
     APP_CONFIG.SCREEN_CLASS = 'lg';
@@ -51,5 +51,5 @@ angular.module('forumApp')
     } else if(responsiveHelper.isMedium()) {
         APP_CONFIG.SCREEN_CLASS = 'md';
     }
-
+    */
 });

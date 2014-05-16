@@ -34,7 +34,6 @@ angular.module('forumApp')
         
         function traverse(data,menuItem) {
             for (var i in data) {
-                console.log('looking in ',data[i], 'for', menuItem.parent, menuItem.title);
                 if(menuItem.parent && data[i].uid === menuItem.parent){
                     if(data[i].submenu){
                         data[i].submenu.push(menuItem);

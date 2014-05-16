@@ -14,11 +14,54 @@
 angular.module('forumApp')
 	.directive('menu', function () {
 		return {
-			controller: function($rootScope, $scope, $http, menuFactory) {
-
-                menuFactory.get().then(function(data){
-                    console.log('menu data',data);
+			controller: function($scope, $http, menuFactory, responsiveHelp) {
+                
+                $scope.device = responsiveHelp;
+                $scope.menu = {};
+                $scope.submenu = {};
+                $scope.activeMenu;
+                $scope.previousMenu = false;
+                
+                menuFactory.get().then(function(data) {
+                    $scope.menu = data;
                 });
+                
+                $scope.setActiveMenu = function(id) {
+                    if(id === 0){
+                        $scope.activeMenu = false;
+                    } else {
+                        if($scope.getSubmenu(id)){
+                            $scope.activeMenu = id;
+                        }
+                    }
+                }
+                
+                $scope.getSubmenu = function(id){
+                    var findSubmenu = traverse($scope.menu, id);
+                    if(findSubmenu.submenu){
+                        $scope.previousMenu = findSubmenu.previous;
+                        $scope.submenu = findSubmenu.submenu;
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+                
+                function traverse(data, id) {
+                    var found = {};
+                    for (var i in data) {
+                        if(data[i].uid === id){
+                            return { 'submenu':data[i].submenu, 'previous': data[i].parent};
+                        } else {
+                            if (data[i].submenu !== null && typeof(data[i].submenu)=="object") {
+                                found = traverse(data[i].submenu, id);
+                                if(found){
+                                    return found;
+                                }
+                            }
+                        }
+                    }
+                }
                 
 			},
 			templateUrl: 'html/directives/menu.html',

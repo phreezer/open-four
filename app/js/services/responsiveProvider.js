@@ -30,6 +30,28 @@
                 isLarge: function() {
                     return (getSmallestScreenSize($window) >= 1200);
                 },
+                getScreenClass: function() {
+                    var screenClass = 'lg';
+                    // Determine Screen Size Class [lg, md, sm, xs]
+                    if(this.isExtraSmall()) {
+                        screenClass = 'xs';
+                    } else if(this.isSmall()) {
+                        screenClass = 'sm';
+                    } else if(this.isMedium()) {
+                        screenClass = 'md';
+                    }
+                    return screenClass;
+                },
+                getDeviceType: function() {
+                    // Default Settings
+                    var deviceType = 'Desktop';
+
+                    // Determine device type [Desktop, Mobile]
+                    if(this.isSmartDevice){
+                        deviceType = 'Mobile';
+                    }
+                    return deviceType;
+                },
                 winWidth: getSmallestScreenSize($window),
                 isSmartDevice: isSmartDevice($window)
             };
@@ -42,14 +64,16 @@
     .directive('windowResizeListener', function() {
         return {
             restrict: "C",
-            controller: function($scope, $window, responsiveHelp){
-                console.log(responsiveHelp);
-                $scope.onResizeFunction = function() {
-                    $scope.windowHeight = $window.innerHeight;
-                    $scope.windowWidth = $window.innerWidth;
+            controller: function($rootScope, $scope, $window, responsiveHelp, APP_CONFIG){
 
-                    console.log($scope.windowHeight+"-"+$scope.windowWidth)
-                    console.log(responsiveHelp.isLarge());
+                $scope.onResizeFunction = function() {
+                    // Update the config
+                    APP_CONFIG.deviceType = responsiveHelp.getDeviceType();
+                    APP_CONFIG.screenClass = responsiveHelp.getScreenClass();
+                    
+                    // Alert anyone listening
+                    $rootScope.$broadcast('DeviceType Updated');
+                    $rootScope.$broadcast('ScreenClass Updated');
                 };
 
                 // Call to the function when the page is first loaded
