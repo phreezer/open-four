@@ -9,12 +9,9 @@
 */
 
 'use strict';
+/*jshint indent:4 */
 
 angular.module('forumApp')
   .controller('OfpostlistCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+
   });

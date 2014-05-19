@@ -15,12 +15,12 @@ angular.module('forumApp')
     .factory('userFactory', function($http, APP_CONFIG){
         return {
             getProfile : function(params){
-                return $http.get(APP_CONFIG.JSON_USER_PROFILE_URL, {
+                return $http.get(APP_CONFIG.API_USER_PROFILE_URL, {
                     params : params
                 });
             },
             getStats : function(params){
-                return $http.get(APP_CONFIG.JSON_USER_STATS_URL, {
+                return $http.get(APP_CONFIG.API_USER_STATS_URL, {
                     params : params
                 });
             }

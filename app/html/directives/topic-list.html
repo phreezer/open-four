@@ -1,0 +1,13 @@
+w-<div class="topic-brick {{ brick.size }} {{ brick.color }}-solid" style="background-image: url('{{ brick.src }}')" ng-repeat="brick in bricks">
+	<a ng-href="{{ brick.url }}">
+		<div class="color-overlay {{ brick.color }}">
+			<h5 class="author"><img class="avatar" ng-src="{{ brick.avatar }}" alt=""/>{{ brick.author }}</h5>
+			<div class="title-container"><h4 class="title">{{ brick.title }}</h4></div>
+			<div class="stats-container">
+				<span class="stats favs" ng-click="addFav(brick.id, $event)"><span class="icon-25x25 icon-tw-fav-{{ brick.faved }}"></span>{{ brick.favs }}</span>
+				<span class="stats comments"><span class="icon-25x25 icon-tw-comment-{{ brick.commented }}"></span>{{ brick.comments }}</span>
+				<span class="stats views"><span class="icon-25x25 icon-tw-view-{{ brick.viewed }}"></span>{{ brick.views }}</span>
+			</div>
+		</div>
+	</a>
+</div>

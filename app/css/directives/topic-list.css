@@ -1,0 +1,97 @@
+/**
+* Open Forum
+* (c) 2014 by Marcus Heath Showalter. All rights reserved.
+*
+* Author: Marcus Heath Showalter
+* Web: heathshowalter.com
+* Email: marcus.h.showalter@gmail.com
+* Date: 2014-05-18 01:46 AM
+*/
+
+
+.topic-list {
+    width: 768px;
+	color: #fff;
+}
+
+.topic-list .topic-brick {
+    background-size: cover;
+    -webkit-transition: all 0;
+    -moz-transition: all 0;
+    -ms-transition: all 0;
+    -o-transition: all 0;
+    transition: all 0;
+    /* easeInOutExpo */
+}
+
+.topic-list .topic-brick a, .topic-list .topic-brick a:visited, .topic-list .topic-brick a:hover, .topic-list .topic-brick a:focus{
+	color:inherit;
+	text-decoration:none;
+}
+.topic-list .topic-brick .color-overlay:hover, .topic-list .topic-brick .color-overlay:focus{
+	opacity:.9;
+}
+
+.topic-list .topic-brick .color-overlay {
+	position:relative;
+	display:table;
+	padding: 10px;
+	height:100%;
+	width:100%;
+}
+
+.topic-list .topic-brick.size11, .topic-list .topic-brick.size21, .topic-list .topic-brick.size31 {
+    height: 256px;
+}
+.topic-list .topic-brick.size11 {
+    width: 256px;
+}
+.topic-list .topic-brick.size21 {
+    width: 512px;
+}
+.topic-list .topic-brick.size31 {
+    width: 768px;
+}
+
+.topic-list .topic-brick .avatar {
+    width:30px;
+    height:30px;
+	margin-right: 10px;
+}
+
+.topic-list .topic-brick .author {
+    height:30px;
+	display:table-row;
+}
+
+.topic-list .topic-brick .title-container {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: left;
+}
+
+.topic-list .topic-brick .title-container .title {
+	position:relative;
+	top:-10px;
+	padding:0 15px;
+	word-wrap:break-word;
+}
+
+.topic-list .topic-brick .stats-container {
+	position:absolute;
+	display:table-row;
+	bottom:15px;
+	right:0;
+}
+
+.topic-list .topic-brick .stats-container .stats {
+	float:right;
+	margin-right:15px;
+	vertical-align:middle;
+}
+
+.stats .icon-25x25 {
+	margin: 0 4px;
+}
+
+

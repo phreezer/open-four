@@ -65,7 +65,6 @@
         return {
             restrict: "C",
             controller: function($rootScope, $scope, $window, responsiveHelp, APP_CONFIG){
-
                 $scope.onResizeFunction = function() {
                     // Update the config
                     APP_CONFIG.deviceType = responsiveHelp.getDeviceType();

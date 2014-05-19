@@ -55,7 +55,7 @@ angular.module('forumApp')
         
         return {
             get : function(params){
-                return $http.get(APP_CONFIG.JSON_MENU_URL, {
+                return $http.get(APP_CONFIG.API_MENU_URL, {
                     params : params
                 }).then(function(result){
                     if(!menu[0]){

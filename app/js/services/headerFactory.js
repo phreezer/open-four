@@ -15,7 +15,7 @@ angular.module('forumApp')
     .factory('headerFactory', function($http, APP_CONFIG){
         return {
             get : function(params){
-                return $http.get(APP_CONFIG.JSON_HEADER_URL, {
+                return $http.get(APP_CONFIG.API_HEADER_URL, {
                     params : params
                 });
             }
