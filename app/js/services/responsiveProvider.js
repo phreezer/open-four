@@ -60,7 +60,7 @@
                 return helper;
             };
         }])
-
+	/*
     .directive('windowResizeListener', function() {
         return {
             restrict: "C",
@@ -85,7 +85,8 @@
             }
         };
     })
-    
+    */
+	
     function isSmartDevice( $window )
     {
         var ua = $window['navigator']['userAgent'] || $window['navigator']['vendor'] || $window['opera'];

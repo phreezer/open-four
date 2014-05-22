@@ -18,7 +18,7 @@ angular.module('forumApp', [
 .config(function($routeProvider, responsiveHelpProvider, APP_CONFIG) {
     
     $routeProvider.when('/', {
-        templateUrl: 'html/pages/main.html',
+        templateUrl: 'html/pages/topic-list.html',
         controller: 'MainCtrl'
     }).otherwise({
         redirectTo: '/'

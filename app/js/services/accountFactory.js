@@ -18,7 +18,7 @@ angular.module('forumApp')
             getStatus : function(params) {
                 return $http.get(APP_CONFIG.API_ACCOUNT_URL, {
                     params : params
-                });
+				});
             }
         }
     });

@@ -10,7 +10,6 @@
 
 
 .topic-list {
-    width: 768px;
 	color: #fff;
 }
 
@@ -41,8 +40,9 @@
 }
 
 .topic-list .topic-brick.size11, .topic-list .topic-brick.size21, .topic-list .topic-brick.size31 {
-    height: 256px;
+
 }
+/*
 .topic-list .topic-brick.size11 {
     width: 256px;
 }
@@ -52,6 +52,7 @@
 .topic-list .topic-brick.size31 {
     width: 768px;
 }
+*/
 
 .topic-list .topic-brick .avatar {
     width:30px;
